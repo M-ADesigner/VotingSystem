@@ -3,5 +3,5 @@ margin: 0 auto;
 display: grid;
 place-content: center;
 min-height: 100vh;
-background-color: #2a2828;
+background-color: #2a2828; 
 }

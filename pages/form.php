@@ -1,3 +1,10 @@
+<?php
+
+$votante = new Votante();
+$jsonData = $votante->getVotante();
+$data = json_decode($jsonData);
+
+?>
 <h1 class="mb-5 text-white">Formulario de votaciòn</h1>
 
 <form id="form" name="form" method="post" class="row" style="width: 500px; color:white">
@@ -47,13 +54,19 @@
     <div class="mb-1 row">
         <label for="candidato" class="col-sm-6 col-form-label">Candidato</label>
         <div class="col-sm-6">
-            <select name="candidato" id="candidato" class="form-select">
-                <option selected></option>
-                <option value="Maicol Avila">Maicol Avila</option>
-                <option value="El pepe">Patricio Avila</option>
+            <select name="candidato" id="candidato" class="form-select" required>
+                <option selected>Opciones</option>
+                <?php
+                foreach ($data as $candidato) {
+                ?>
+                    <option value="<?= $candidato->candidato ?>"><?= $candidato->candidato ?></option>
+                <?php
+                }
+                ?>
             </select>
         </div>
     </div>
+
 
     <div class="d-flex text-xl row mt-3">
         <p class="col-sm-6">
@@ -73,7 +86,6 @@
     <input type="submit" class="btn btn-primary w-50 mt-3" value="Votar">
 </form>
 
-
 <script src="http://localhost/php/sistemaVotacion/includes/js/validarRut.js"></script>
 <script src="http://localhost/php/sistemaVotacion/includes/js/validarAlias.js"></script>
 <script>
@@ -85,7 +97,7 @@
 
         const booleanAlias = validarAlias(data.alias)
         const booleanRut = Fn.validaRut(data.rut)
-        if(selectedOptions.length < 2) return alert('Debe elegir al menos dos opciones de como se entero de nosotros')
+        if (selectedOptions.length < 2) return alert('Debe elegir al menos dos opciones de como se entero de nosotros')
 
         booleanAlias && booleanRut ?
             $.ajax({
