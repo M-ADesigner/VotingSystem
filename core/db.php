@@ -12,9 +12,6 @@ class Db
         if ($this->conn->connect_error) {
             die('Error de conexión: ' . $this->conn->connect_error);
         }
-
-        echo('Conexion exitosa');
-
         // Configurar el juego de caracteres
         $this->conn->set_charset("utf8mb4");
     }

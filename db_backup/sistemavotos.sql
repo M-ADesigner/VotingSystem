@@ -1,15 +1,13 @@
-
-
 -- Creación de la tabla "votante"
 CREATE TABLE votante (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    rut VARCHAR(20) PRIMARY KEY,
     nombreApellido VARCHAR(50),
     alias VARCHAR(50),
-    rut VARCHAR(20),
     email VARCHAR(50),
     candidato VARCHAR(50),
+    checkboxSelecionados VARCHAR(50),
     region_id INT,
-    comuna_id INT
+    comuna_id INT,
 );
 
 -- Creación de la tabla "region"
@@ -25,10 +23,6 @@ CREATE TABLE comuna (
     region_id INT,
     FOREIGN KEY (region_id) REFERENCES region(id)
 );
-
-
-
-
 
 -- Población de la tabla "region"
 INSERT INTO region (nombre) VALUES
@@ -70,9 +64,9 @@ INSERT INTO comuna (nombre, region_id) VALUES
 
 
 -- Población de la tabla "votante"
-INSERT INTO votante (nombreApellido, alias, rut, email, candidato, region_id, comuna_id) VALUES
-    ('Juan Pérez', 'JPerez', '12345678-9', 'juan.perez@example.com', 'Candidato A', 7, 7),
-    ('María Rodríguez', 'MRod', '98765432-1', 'maria.rodriguez@example.com', 'Candidato B', 3, 4),
-    ('Pedro Sánchez', 'PSan', '55555555-5', 'pedro.sanchez@example.com', 'Candidato C', 12, 11);
-
+INSERT INTO votante (nombreApellido, alias, rut, email, candidato, checkboxSelecionados, region_id, comuna_id) 
+VALUES 
+('Juan Pérez', 'JPerez', '12345678-9', 'juan.perez@example.com', 'Candidato A', 'tv, redes sociales', 7, 7),
+('María Rodríguez', 'MRod', '98765432-1', 'maria.rodriguez@example.com', 'Candidato B', 'web, amigo', 3, 4),
+('Pedro Sánchez', 'PSan', '55555555-5', 'pedro.sanchez@example.com', 'Candidato C', 'tv, amigo', 12, 11);
 
