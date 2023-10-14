@@ -8,13 +8,12 @@ Siga los pasos a continuación para configurar y ejecutar el proyecto en su ento
    - Servidor de base de datos MySQL incluido en XAMPP
 
 2. Configuración del Proyecto:
-   - Clone o descargue el repositorio en la carpeta 'htdocs' de su directorio de instalación de XAMPP.
+   - Clone o descargue el repositorio en la carpeta 'htdocs' de XAMPP, cree una carpeta llamada php y guardelo llamandolo sistemaVotacion de su directorio de instalación de XAMPP.
 
 3. Configuración de la Base de Datos:
    - Inicie el servidor Apache y MySQL en XAMPP.
    - Abra phpMyAdmin desde el panel de control de XAMPP.
-   - Cree una base de datos llamada 'sistemavotos' <-- para evitar problemas con links.
-   - Cree una base de datos llamada sistemavotos.
+   - Cree una base de datos llamada 'sistemavotos' <-- para evitar problemas con verificaciones.
    - Importe el archivo de respaldo de la base de datos 'sistemavotos.sql' proporcionado en la carpeta 'db_backup' y ejecutelo en el ambiente phpMyAdmin.
 
 4. Configuración del Proyecto PHP:
@@ -25,7 +24,7 @@ Siga los pasos a continuación para configurar y ejecutar el proyecto en su ento
    - En este caso el usuario es 'root', contraseña '', y base de datos 'sistemavotos'.
 
 6. Acceso a la Aplicación:
-   - Abra su navegador web y acceda a 'http://localhost/sistemaVotacion' para ver la aplicación en funcionamiento.
+   - Abra su navegador web y acceda a 'http://localhost/php/sistemaVotacion' para ver la aplicación en funcionamiento.
 
 
 ¡Disfrute del proyecto!
