@@ -14,7 +14,6 @@ Siga los pasos a continuación para configurar y ejecutar el proyecto en su ento
    - Inicie el servidor Apache y MySQL en XAMPP.
    - Abra phpMyAdmin desde el panel de control de XAMPP.
    - Cree una base de datos llamada 'sistemavotos' <-- para evitar problemas con links.
-   - Cree una base de datos llamada sistemavotos.
    - Importe el archivo de respaldo de la base de datos 'sistemavotos.sql' proporcionado en la carpeta 'db_backup' y ejecutelo en el ambiente phpMyAdmin.
 
 4. Configuración del Proyecto PHP:
